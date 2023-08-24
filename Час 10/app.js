@@ -18,7 +18,7 @@ app.get("/form", formular.getForm);
 app.post("/form", formular.postForm);
 app.get("/studenti", formular.getStudenti);
 
-//* Ovaa linija ja startuva ekspres aplikacijata da slusa na porta 10000
+//* Ovaa linija ja startuva ekspress aplikacijata da slusa na porta 10000
 //* Ako ima greska pri startuvanje na serverot, se prikazuva greska na konzolata. Vo sprotivno se ispisuva porakata "Server started successfully on port 10000", znaci deka serverot e uspesno startuvan i e spremen da gi prima baranjata od klientite
 app.listen(10000, (err) => {
   if (err) return console.log(err);
