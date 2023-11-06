@@ -30,7 +30,7 @@ console.log(vcitanTekst);
 //! Synchrona verzija
 //* "fs.writeFileSync()" e metod koj go koristi "fs" modulot za sinhrona operacija za kreiranje na nov fajl i zapisuvanje na tekstualen podatok vo nego
 //* Definirame promenliva "podatok" i vo `` se zapisuva testot koj sakame da go zacuvame
-//* So koristenje ne metodot "fs.writeFileSync" kreirame nov fajl i vo () gi zapisuvame imeto na noviot fajl i  vremenskata oznaka vo forma na brojka
+//* So koristenje na metodot "fs.writeFileSync" kreirame nov fajl i vo () gi zapisuvame imeto na noviot fajl i  vremenskata oznaka vo forma na brojka
 
 const podatok = `Ova sakame da go zapiseme vo nasiot kompjuter ${2 + 100}`;
 fs.writeFileSync(`./novTekst${Date.now()}.txt`, podatok);

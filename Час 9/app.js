@@ -47,7 +47,7 @@ app.get("/", (req, res) => {
 
 //* Ovaa linija kod e del od Express aplikacijata i definira obrabotka na HTTP POST baranja na patekata "/"(osnovnata pateka) na serverot
 //* "app.post("/")" - Ovaa f-ja definira kako aplikacijata treba da odgovori na HTTP POST baranja na pateka "/". "POST" metodot se koristi za prakanje podatoci kon serverot, obicno za kreiranje ili azuriranje na resursi
-//* "(req, res) => { ... }" - Ova e anonimna f-ja koja se povikuva koga ke se primi POST baranje na patekata "/". "req" e objektot sto pretstavuva HTTP baranjeto od klientot, a "res" e objektot koj se koristi za sostavuvanje i iskrakanje na HTTP odgovorot kon klientot
+//* "(req, res) => { ... }" - Ova e anonimna f-ja koja se povikuva koga ke se primi POST baranje na patekata "/". "req" e objektot sto pretstavuva HTTP baranjeto od klientot, a "res" e objektot koj se koristi za sostavuvanje i isprakanje na HTTP odgovorot kon klientot
 //* "console.log(req.body);" - Ovaa linija go prikazuva teloto na HTTP baranjeto vo konzolata. Teloto na baranjeto se koristi cesto za prenos na podatocite kako JSON ili formularski podatoci
 //* "const novStudent = { ... }" - Ovaa linija kreira objekt "novStudent" so podatocite koi se primeni na teloto na HTTP baranjeto. Ova predpostavuva deka baranjeto vklucuva parametri kako "ime", "prezime" i "prosek"
 //* "data.studenti.push(novStudent);" - Ovaa linija go dodava objektot "novStudent" vo nizata "studenti" so nekakvi podatoci "data"
@@ -64,18 +64,18 @@ app.post("/", (req, res) => {
   res.render("index", data);
 });
 
-//* Ovaa linija kod e del od Express aplikacijata i definira obrabotka na HTTP POST baranja na dinamicka pateka "/delete/:ime" na serverot. Ovaa pateka sodrzi patametri ":ime", koj parametar moze da bide razlicno ime na studenti
+//* Ovaa linija kod e del od Express aplikacijata i definira obrabotka na HTTP POST baranja na dinamicka pateka "/delete/:ime" na serverot. Ovaa pateka sodrzi parametri ":ime", koj parametar moze da bide razlicno ime na studenti
 //* "app.post("/delete/.ime")" - Ovaa f-ja definira kako aplikacijata treba da odgovori na HTTP POST baranja na patekata "/delete/:ime". Ova e dinamicka pateka kade ":ime" pretstatvuva parametar koj moze da bide razlicno studentsko ime
-//* "(req, res) => { ... }" - Ova e anonimna f-ja koja se povikuva koga ke se primi POST baranje na dinamiackata pateka "/delete/:ime". "req" e objekt sto pretstavuva HTTP baranjeto od klientot, a "res" e objektot koj se koristi za sostavuvanje i isprakanje na HTTP odgovor kon klientot
+//* "(req, res) => { ... }" - Ova e anonimna f-ja koja se povikuva koga ke se primi POST baranje na dinamickata pateka "/delete/:ime". "req" e objekt sto pretstavuva HTTP baranjeto od klientot, a "res" e objektot koj se koristi za sostavuvanje i isprakanje na HTTP odgovor kon klientot
 //* "res.redirect("/");" - Ovaa f-ja go prenasocuva korisnikot na osnovnata pateka "/" otkako logikata za brisenje ke bide izvrsena. Ova moze da bide korisno za da se prikaze azuriranata lista na studenti otkako eden student bil izbrisan
 app.post("/delete/:ime", (req, res) => {
-  //? DA SE KREIRA LOGIKA KAKO KJE GO BRISHIME STUDENTOT
+  //? DA SE KREIRA LOGIKA KAKO KJE GO BRISHEME STUDENTOT
   res.redirect("/");
 });
 
 //* Ovaa linija ja startuva ekspres aplikacijata da slusa na porta 9000
 //* Ako ima greska pri startuvanje na serverot, se prikazuva greska na konzolata. Vo sprotivno se ispisuva porakata "succesfully started on port 9000", znaci deka serverot e uspesno startuvan i e spremen da gi prima baranjata od klientite
-app.listen(10000, (err) => {
+app.listen(9000, (err) => {
   if (err) return console.log(err);
   console.log("succesfully started on port 9000");
 });

@@ -47,17 +47,17 @@ app.get("/calculator/:op/:a/:b", (req, res) => {
 
 app.get("/konverter/:op/:a", (req, res) => {
   if (req.params.op === "f2c") {
-    const farenajt = (req.params.a - 32) * 0.556;
-    return res.send(`${farenajt}`);
+    const farenhajt = (req.params.a - 32) * 0.556;
+    return res.send(`${farenhajt}`);
   } else if (req.params.op === "c2f") {
-    const celsius = req.params.a * 1.8 + 32;
-    return res.send(`${celsius}`);
+    const celzius = (req.params.a * 1.8) + 32;
+    return res.send(`${celzius}`);
   } else {
     res.send("Imate pogresna operacija selektirano");
   }
 });
 
-//! So app.listen moze da ja startuvame nasata veb aplikacija i da ja napravime dostapna za korisnicite
+//! So app.listen moze da ja startuvame nasata web aplikacija i da ja napravime dostapna za korisnicite
 app.listen(10000, (err) => {
   if (err) return console.log(err);
   console.log("Server started successfully on port 10000");
@@ -73,7 +73,7 @@ app.listen(10000, (err) => {
 //* 1. GET metod:
 //* -podatocite se prenesuvaat preku URL-ot kako del od query string(parametri prikaceni na krajot na URL-ot)
 //* -parametrite se vidlivi vo URL-ot i moze lesno da bidat zabelezani i zacuvani vo istorijata na prebaruvacot ili serverskite logovi
-//* -GET metodot ima ogranicena dolzina na podatoci sto moze da se prenesat, sto go pravi nesoodveten ze prenesuvanje na golemi obemi na podatoci
+//* -GET metodot ima ogranicena dolzina na podatoci sto moze da se prenesat, sto go pravi nesoodveten za prenesuvanje na golemi obemi na podatoci
 
 //* 2. POST metod:
 //* -podatocite se prenesuvaat vo teloto na HTTP baranjeto, a ne vo URL-ot kako pri GET metodot

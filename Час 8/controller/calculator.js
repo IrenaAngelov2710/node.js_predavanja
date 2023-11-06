@@ -75,7 +75,7 @@ const postCalculator = async (req, res) => {
 
     const response = await parseTemplate("calculator.html", {
       data: result,
-      ime: `Opreacija ${req.body.op}`,
+      ime: `Operacija ${req.body.op}`,
     });
 
     res.send(response);

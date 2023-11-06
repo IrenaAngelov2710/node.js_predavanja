@@ -14,10 +14,10 @@ const server = http.createServer((req, res) => {
 });
 
 //* So pomos na metodot "server.listen()" se ovozmozuva slusanje na odredena porta i IP adresa
-//* Vo ovoj slucaj, serverot slusa na posta 10000 i lokalnata IP adresa "127.0.0.1"
-//* Koga serverot ke bide uspeesno startuvan i slusa na soodvetnata porta, se povikuva callback f-jata so "err" argumentot
+//* Vo ovoj slucaj, serverot slusa na porta 10000 i lokalnata IP adresa "127.0.0.1"
+//* Koga serverot ke bide uspesno startuvan i slusa na soodvetnata porta, se povikuva callback f-jata so "err" argumentot
 //* Ako ima greska pri startuvanje na serverot, se ispisuva "error"
-//* Vo sprotivno, se ispisuva "server started on port 10000". Ova znaci deka serverot uspesno startuval i e spremen da go primaat baranjeto na klientite
+//* Vo sprotivno, se ispisuva "server started on port 10000". Ova znaci deka serverot uspesno startuval i e spremen da go prima baranjeto na klientite
 server.listen(10000, "127.0.0.1", (err) => {
   if (err) console.log("error");
   console.log("server started on port 10000");

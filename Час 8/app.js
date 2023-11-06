@@ -41,7 +41,7 @@ app.get("/newton/:mass/:acc", calculator.calculateForce);
 
 //* Ovie dve linii definiraat dve ruti za obratoka na HTTP GET i POST baranja bez parametri
 //* Patekata "/calculator" e povrzana so f-ciite "getCalculator" i "postCalculator" od modulot "calculator"
-//* Ova znaci koga klientot pristapuva na http://localhost:10000/calculator, se aktivira rutata "getCalculator", a koga klientot ke prati HTTP POST baranje na istata pateka, se aktivira rutata "postCalculator"
+//* Ova znaci koga klientot pristapuva na http://localhost:10000/calculator, se aktivira funkcijata "getCalculator", a koga klientot ke prati HTTP POST baranje na istata ruta, se aktivira funkcijata "postCalculator"
 app.get("/calculator", calculator.getCalculator);
 app.post("/calculator", calculator.postCalculator);
 

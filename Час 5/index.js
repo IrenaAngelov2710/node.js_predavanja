@@ -25,7 +25,7 @@ const modul = require("./readWrite");
     });
 
     // console.log(sortProsek);
-    const nanizokProsek = sortProsek[0];
+    const najnizokProsek = sortProsek[0];
     const najvisokProsek = sortProsek[sortProsek.length - 1];
 
     //* So pomos na "reduce()" metodot se presmetuva sumata na prosecite na site studenti vo promenlivata "sredenProsek"
